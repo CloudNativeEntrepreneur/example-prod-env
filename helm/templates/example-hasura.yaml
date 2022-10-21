@@ -6,7 +6,7 @@ metadata:
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
-  project: example-production
+  project: example-prod-env
   source:
     path: charts/example-hasura
     repoURL: https://github.com/cloudnativeentrepreneur/example-hasura.git
@@ -17,7 +17,7 @@ spec:
           tag: latest
       version: v3
   destination:
-    namespace: example-production
+    namespace: example-prod-env
     server: https://kubernetes.default.svc
   syncPolicy:
     automated:
