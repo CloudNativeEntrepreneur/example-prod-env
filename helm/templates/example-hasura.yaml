@@ -1,22 +1,20 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: devops-toolkit
+  name: example-hasura
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   project: example-production
   source:
-    path: helm
-    repoURL: https://github.com/vfarcic/devops-toolkit.git
+    path: charts/example-hasura
+    repoURL: https://github.com/cloudnativeentrepreneur/example-hasura.git
     targetRevision: HEAD
     helm:
       values: |
         image:
-          tag: 2.9.17
-        ingress:
-          host: devops-toolkit.127.0.0.1.nip.io
+          tag: latest
       version: v3
   destination:
     namespace: example-production
