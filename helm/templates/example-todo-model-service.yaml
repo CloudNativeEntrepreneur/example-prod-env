@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: example-todo-model-service
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: example-prod-env
+  source:
+    path: charts/example-todo-model-service
+    repoURL: https://github.com/cloudnativeentrepreneur/example-todo-model-service.git
+    targetRevision: HEAD
+    helm:
+      values: |
+        image:
+          tag: latest
+      version: v3
+  destination:
+    namespace: example-prod-env
+    server: https://kubernetes.default.svc
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+
