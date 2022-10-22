@@ -10,11 +10,8 @@ spec:
   source:
     path: charts/example-hasura
     repoURL: https://github.com/cloudnativeentrepreneur/example-hasura.git
-    targetRevision: HEAD
+    targetRevision: v0.4.8
     helm:
-      values: |
-        image:
-          tag: latest
       version: v3
   destination:
     namespace: example-prod-env
