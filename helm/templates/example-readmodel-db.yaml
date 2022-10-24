@@ -8,7 +8,7 @@ metadata:
 spec:
   project: example-prod-env
   source:
-    path: charts/example-readmodel-db
+    path: charts/example-readmodel
     repoURL: https://github.com/cloudnativeentrepreneur/example-readmodel-db.git
     targetRevision: HEAD
     helm:
