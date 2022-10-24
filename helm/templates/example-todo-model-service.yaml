@@ -10,7 +10,7 @@ spec:
   source:
     path: charts/example-todo-model-service
     repoURL: https://github.com/cloudnativeentrepreneur/example-todo-model-service.git
-    targetRevision: v0.9.1
+    targetRevision: v0.9.2
     helm:
       version: v3
   destination:
