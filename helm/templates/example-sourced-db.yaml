@@ -9,7 +9,7 @@ spec:
   project: example-prod-env
   source:
     path: charts/sourced-db
-    repoURL: https://github.com/cloudnativeentrepreneur/example-sourced-db.git
+    repoURL: https://github.com/cloudnativeentrepreneur/sourced-db.git
     targetRevision: HEAD
     helm:
       version: v3
