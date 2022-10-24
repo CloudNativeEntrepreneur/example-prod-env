@@ -8,7 +8,7 @@ metadata:
 spec:
   project: example-prod-env
   source:
-    path: charts/example-hasura
+    path: helm
     repoURL: https://github.com/cloudnativeentrepreneur/example-hasura.git
     targetRevision: v0.9.0
     helm:
