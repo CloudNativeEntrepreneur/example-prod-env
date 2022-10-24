@@ -6,12 +6,14 @@ Create the following resource in your argocd autopilot's projects directory
 apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
-  name: example-production
+  name: example-prod-env
   namespace: argocd
+  annotations:
+    argocd.argoproj.io/sync-wave: "2"
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
-  description: Example Domain Production project
+  description: Example Domain Production Environment
   sourceRepos:
   - '*'
   destinations:
@@ -29,19 +31,21 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: production
+  name: example-prod-env
   namespace: argocd
+  annotations:
+    argocd.argoproj.io/sync-wave: "3"
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
-  project: production
+  project: example-prod-env
   source:
     repoURL: https://github.com/cloudnativeentrepreneur/example-prod-env.git
     targetRevision: HEAD
     path: helm
   destination:
     server: https://kubernetes.default.svc
-    namespace: production
+    namespace: example-prod-env
   syncPolicy:
     automated:
       selfHeal: true
