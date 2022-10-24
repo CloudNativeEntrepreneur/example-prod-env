@@ -10,7 +10,7 @@ spec:
   source:
     path: helm
     repoURL: https://github.com/cloudnativeentrepreneur/sveltekit-web3auth-template.git
-    targetRevision: HEAD
+    targetRevision: v0.8.8
     helm:
       version: v3
   destination:
