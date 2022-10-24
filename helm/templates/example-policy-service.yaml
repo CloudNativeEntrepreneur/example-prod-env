@@ -10,7 +10,7 @@ spec:
   source:
     path: charts/example-policy-service
     repoURL: https://github.com/cloudnativeentrepreneur/example-policy-service.git
-    targetRevision: HEAD
+    targetRevision: v0.2.1
     helm:
       version: v3
   destination:
@@ -20,4 +20,3 @@ spec:
     automated:
       selfHeal: true
       prune: true
-
