@@ -1,15 +1,15 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: example-todo-model-service
+  name: example-readmodel-db
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   project: example-prod-env
   source:
-    path: charts/example-todo-model-service
-    repoURL: https://github.com/cloudnativeentrepreneur/example-todo-model-service.git
+    path: charts/example-readmodel-db
+    repoURL: https://github.com/cloudnativeentrepreneur/example-readmodel-db.git
     targetRevision: HEAD
     helm:
       version: v3
