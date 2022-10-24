@@ -8,7 +8,7 @@ metadata:
 spec:
   project: example-prod-env
   source:
-    path: charts/example-policy-service
+    path: helm
     repoURL: https://github.com/cloudnativeentrepreneur/example-policy-service.git
     targetRevision: v0.2.2
     helm:
