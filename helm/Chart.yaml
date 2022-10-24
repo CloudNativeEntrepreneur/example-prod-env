@@ -1,4 +1,4 @@
 apiVersion: v1
-description: Production environment
-name: devops-toolkit
+description: Example Production environment
+name: example-prod-env
 version: "0.1.0"
