@@ -8,8 +8,8 @@ metadata:
 spec:
   project: example-prod-env
   source:
-    path: charts/sveltekit-web3auth
-    repoURL: https://github.com/cloudnativeentrepreneur/sveltekit-web3auth.git
+    path: helm
+    repoURL: https://github.com/cloudnativeentrepreneur/sveltekit-web3auth-template.git
     targetRevision: HEAD
     helm:
       version: v3
