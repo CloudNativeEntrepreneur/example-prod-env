@@ -10,7 +10,7 @@ spec:
   source:
     path: charts/example-dead-letter-service
     repoURL: https://github.com/cloudnativeentrepreneur/example-dead-letter-service.git
-    targetRevision: HEAD
+    targetRevision: v0.3.2
     helm:
       version: v3
   destination:
