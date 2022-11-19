@@ -8,9 +8,9 @@ metadata:
 spec:
   project: example-prod-env
   source:
-    path: charts/sourced-db
+    path: helm
     repoURL: https://github.com/cloudnativeentrepreneur/sourced-db.git
-    targetRevision: HEAD
+    targetRevision: v0.2.0
     helm:
       version: v3
   destination:
