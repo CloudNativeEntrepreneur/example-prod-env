@@ -1,3 +1,5 @@
+---
+# Source: example-policy-service-promote/templates/application.yaml
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
@@ -9,10 +11,11 @@ spec:
   project: example-prod-env
   source:
     path: helm
-    repoURL: https://github.com/cloudnativeentrepreneur/example-policy-service.git
-    targetRevision: v0.5.1
+    repoURL: https://github.com/CloudNativeEntrepreneur/example-policy-service.git
+    targetRevision: v0.7.0
     helm:
       version: v3
+      values: []
   destination:
     namespace: example-prod-env
     server: https://kubernetes.default.svc
