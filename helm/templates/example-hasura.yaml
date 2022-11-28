@@ -1,3 +1,5 @@
+---
+# Source: example-hasura-promote/templates/application.yaml
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
@@ -9,8 +11,8 @@ spec:
   project: example-prod-env
   source:
     path: helm
-    repoURL: https://github.com/cloudnativeentrepreneur/example-hasura.git
-    targetRevision: v0.14.0
+    repoURL: https://github.com/CloudNativeEntrepreneur/example-hasura.git
+    targetRevision: v0.15.1
     helm:
       version: v3
   destination:
